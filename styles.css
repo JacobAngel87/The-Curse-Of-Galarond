@@ -1,0 +1,122 @@
+/*
+  Author: Jacob Angel
+  Date: 10/13/2020
+  Project: Mid-Term, (Curse of Galarond)
+  Instructor: Kirsten Markley
+  File: styles.css
+*/
+
+/*Fantasy Style Font*/
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Basic&display=swap");
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Gentium Basic", serif;
+  background-color: rgba(255, 228, 181, 1);
+}
+
+#area {
+  background-color: black;
+  color: white;
+  font-size: 2.2vw;
+}
+
+#main {
+  width: 40%;
+  margin-bottom: 20%;
+}
+
+#areaContainer {
+  width: 50%;
+}
+
+#headingContainer {
+  width: 100%;
+  background-image: url("Images/galaxy.jpg");
+  color: rgb(255, 255, 255);
+}
+
+.tabs {
+  font-size: 1.8vw;
+}
+
+#inventoryTab {
+  margin-left: 30%;
+}
+
+#logTab {
+  margin-right: 30%;
+}
+
+#title {
+  font-weight: bolder;
+  font-size: 3vw;
+}
+
+#text {
+  padding-top: 2%;
+  margin-left: 2%;
+  font-size: 1.6vw;
+}
+#startButton {
+  font-size: 3vw;
+  width: 10%;
+}
+
+.float-child {
+  float: left;
+}
+.float-child.weapons {
+  width: 40%;
+  border: solid white 2px;
+}
+.float-child.armors {
+  border: solid white 2px;
+  width: 40%;
+}
+.float-child.buttons {
+  margin-right: 20px;
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(235, 215, 110, 1);
+  overflow-x: hidden;
+}
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  font-size: 60px;
+}
+.overlay-content {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  text-align: left;
+  margin-top: 30px;
+}
+
+#mainImage {
+  position: fixed;
+  top: 200px;
+  right: 50px;
+  width: 600px;
+  height: 400px;
+}
+
+/* Removes the game picture if the screen is too small*/
+@media only screen and (max-width: 1099px) {
+  #mainImage {
+    display: none;
+  }
+}

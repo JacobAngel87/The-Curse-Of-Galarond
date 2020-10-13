@@ -1,0 +1,148 @@
+<!--
+  Author: Jacob Angel
+  Date: 10/13/2020
+  Project: Mid-Term, (Curse of Galarond)
+  Instructor: Kirsten Markley
+  File: index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <!-- My Stylesheet -->
+    <link href="styles.css" rel="stylesheet" />
+    <title>The Curse of Galarond</title>
+  </head>
+
+  <body>
+    <!-- Inventory Sidebar -->
+    <div id="inventory" class="overlay">
+      <p class="closebtn" onclick="closeInventory()">
+        &times;
+      </p>
+      <!-- Inventory Elements -->
+      <div class="overlay-content">
+        <h1 style="text-decoration: underline">Inventory</h1>
+        <br />
+        <h2 id="gp"></h2>
+        <h2 id="currentWeapon"></h2>
+        <h2 id="currentArmor"></h2>
+        <br />
+        <h1 style="text-decoration: underline">Stats</h1>
+        <h2 id="hp"></h2>
+        <h2 id="str"></h2>
+        <h2 id="lvl"></h2>
+        <h2 id="xp"></h2>
+        <br />
+      </div>
+    </div>
+    <!-- Title Bar -->
+    <div id="headingContainer">
+      <div id="titleContainer">
+        <h1 id="title" class="text-center">The Curse of Galarond</h1>
+      </div>
+      <!-- Tabs -->
+      <div id="tabContainer">
+        <h3 id="tabBar">
+          <span class="tabs" id="inventoryTab"
+            ><a href="#" onclick="openInventory()">Inventory</a></span
+          >
+          <span class="tabs" id="logTab" style="float: right"
+            ><a href="#">Log</a></span
+          >
+        </h3>
+      </div>
+    </div>
+    <!-- Area Header -->
+    <div class="container text-center" id="areaContainer">
+      <h2 id="area">Welcome!</h2>
+    </div>
+    <!-- Game Text Container -->
+    <div id="main" class="float-container" hidden>
+      <div class="float-child text">
+        <p id="text" class="text-left"></p>
+      </div>
+      <!-- Game Buttons -->
+      <div class="float-child buttons">
+        <div id="buttons" hidden>
+          <button id="progress">Progress</button>
+          <button id="hunt" hidden>Hunt for Monsters</button>
+          <button id="searchForGalarond" hidden>Search for Galarond</button>
+          <button id="goEquipStore" hidden>Go to Store</button>
+          <button id="goInn" hidden>Go to Inn</button>
+          <button id="melee" hidden>Attack</button>
+          <button id="flee" hidden>Flee</button>
+          <button id="continueHunt" hidden>Continue Hunting</button>
+          <button id="returnToTown" hidden>Return to Mysidia</button>
+          <button id="weapons" hidden>Weapons</button>
+          <button id="armors" hidden>Armors</button>
+          <button id="buy" hidden>Buy</button>
+          <button id="sleep" hidden>Rent a Room</button>
+          <button id="leaveStore" hidden>Leave Store</button>
+          <button id="leaveInn" hidden>Leave Inn</button>
+          <button id="end" hidden>End Game</button>
+          <button id="clear">Clear Text</button>
+        </div>
+      </div>
+      <!-- Weapon Shop Elements -->
+      <div class="float-child weapons" id="weaponCatalog" hidden>
+        <h2>Weapons</h2>
+        <select id="weaponList"></select>
+        <h3>Weapon Details</h3>
+        <ul>
+          <li id="weaponPrice">Price: 10gp</li>
+          <li id="weaponPower">Attack Power: 10</li>
+        </ul>
+      </div>
+      <!-- Armor Shop Elements -->
+      <div class="float-child armors" id="armorCatalog" hidden>
+        <h2>Armors</h2>
+        <select id="armorList"></select>
+        <h3>Armor Details</h3>
+        <ul>
+          <li id="armorPrice">Price: 30gp</li>
+          <li id="armorRating">Armor Rating: 0.1</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Start Button -->
+    <div class="text-center">
+      <button type="button" id="startButton">Start</button>
+    </div>
+    <img id="mainImage" src="" hidden />
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <!-- My Scripts -->
+    <script src="textScripts.js"></script>
+    <script src="playerScripts.js"></script>
+    <script src="battleScripts.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
